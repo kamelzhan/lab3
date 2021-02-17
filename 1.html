@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta = "utf-8">
+        <title>To-do List</title>
+        <style>
+            body{
+                background-image: url(fon.jpg);
+                background-size: cover;
+
+            }
+            h1{
+                margin-top: 60px;
+                text-align: center;
+                font-family: fantasy;
+                color:rgb(21, 5, 236);
+            }
+            
+            .head{
+                width:2000px;
+                height:60px;
+                
+                border-radius: 6px;
+                position:absolute;
+                top:0px;
+                left:0px;
+            }
+            .losung{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                position:absolute;
+                background-color: rgb(0, 0, 0);
+                font-weight: 700;
+                color:blue;
+
+            }
+            .text{
+                width:700px;
+                border-radius: 10px;
+                height:35px;
+                font-family: 'Courier New', Courier, monospace;
+                
+            }
+            .content{
+                display:flex;
+                margin-left: 320px;
+            }
+            .add{
+                border-radius: 7px;
+                height:40px;
+                width:70px;
+                margin-left:15px;
+                background-color: indigo;
+                font-family: 'monospace';
+                font-size:20px;
+            }
+            #list{
+                font-size: 20px;
+                
+                
+                
+            }
+            li{
+                
+                cursor:pointer;
+                background: lime;
+                margin-bottom: 3px;
+                width:500px;
+                height:30px;
+                padding-top:5px;
+                
+            }
+            li:hover {
+            background: rgb(0, 97, 13);
+            }
+            .success{
+                text-decoration: line-through;
+            }
+            input[type=checkbox], label {
+                
+                
+                margin: 5px;
+                cursor: pointer; 
+                font-size: 20px;
+                
+            }
+            #trash{
+                position:absolute;
+                left:820px;
+                width:20px;
+                
+                
+            }
+            .elementy{
+                width:500px;
+                margin-left: 320px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class = "head">
+            <p class = "losung">Plan your day with us</p>
+        </div>
+        <div class = "all">
+        <h1>To do list</h1>
+        <div class = "content">
+        <input type="text" id = "zadacha" placeholder="Напишите новую задачу..." class = "text">
+        <button type = "button" class = "add">Add</button>
+        </div>
+        <div class = "elementy">
+        <ul id = "list">
+            
+
+        </ul>
+    </div>
+    </div>
+    <script src = "scr.js"></script>
+    </body>
+</html>
