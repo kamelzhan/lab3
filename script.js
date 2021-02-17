@@ -7,22 +7,21 @@ let trash = document.getElementsByClassName('.trash');
 let toDoList = [];
 
 list.addEventListener('click', function(event){
-     let el = event.target;
-    
+    let el = event.target;
+    console.log(el.checked);
     for(let i = 0; i < toDoList.length; i++){
         if(el.attributes.class.value == 'trash'+String(i)){
             el.parentNode.style.display = 'none';
-            
+            delete toDoList[i];
         }
+    }
+    if(el.checked == true){
+        el.parentNode.style.textDecoration = 'line-through';
+    }
+    else{
+        el.parentNode.style.textDecoration = 'none';
     }
     
-    for(let i = 0; i < toDoList.length; i++){
-        
-        if(el.attributes.class.value == 'item_'+String(i)){
-            el.className = "success";
-            
-        }
-    }
 });
 
 function del(el){
@@ -33,7 +32,7 @@ clickBut.addEventListener('click', function(){
     
     let newItem = {
         list: input.value,
-        done: false,
+        checked: false,
         del: false
     };
     toDoList.push(newItem);
